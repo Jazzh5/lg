@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/m.Tween.js"></script>
+        <!-- <script type="text/javascript" src="js/jstimeline.min.js"></script>
+        <script type="text/javascript" src="js/jstween.js"></script> -->
+    </head>
+    <body> 
+        <div id="box">
+            <!-- 音乐 -->
+            <div id="audio_btn" class="rotate">
+                <img src="imgs/audio.png" class="audio_rotate" alt="" />
+                <audio loop src="audio/4.mp3" id="media" preload="preload"  loop="loop"></audio>
+            </div>
+            <div id="loading">
+                <div class="load animate">
+                    <img src="imgs/loading.png" alt="" />
+                </div>
+                <!-- <img src="imgs/bj.jpg" class="loading_bac" alt="" /> -->
+                <p class="click_">正在加载中...</p>
+            </div>
+            <div id="container">
+
+                <!-- 背景图大图 -->
+                <div class="bac">
+                    <img src="imgs/bac.jpg" alt="" />
+                </div>
+
+
+                <!-- 闪动点 -->
+                <div id="cli">
+                    <div class="bj_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="sh_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="gz_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="sz_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="wh_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="xm_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="hz_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="cq_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="cd_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                    <div class="fz_cli">
+                        <img src="imgs/yuanxin.png" class="yuanxin" alt="" />
+                        <img src="imgs/guangquan.png" class="guangquan" alt="" />
+                    </div>
+                </div>
+                <!-- 跳跃 -->
+                <div class="mask">
+                    <div class="bj_sh">
+                        <img src="imgs/bj_sh.png" alt="" />
+                    </div>
+                    <div class="sh_gz">
+                        <img src="imgs/sh_gz.png" alt="" />
+                    </div>
+                    <div class="gz_sz">
+                        <img src="imgs/gz_sz.png" alt="" />
+                    </div>
+                    <div class="sz_wh">
+                        <img src="imgs/sz_wh.png" alt="" />
+                    </div>
+                    <div class="wh_xm">
+                        <img src="imgs/wh_xm.png" alt="" />
+                    </div>
+                    <div class="xm_hz">
+                        <img src="imgs/xm_hz.png" alt="" />
+                    </div>
+                    <div class="hz_cq">
+                        <img src="imgs/hz_cq.png" alt="" />
+                    </div>
+                    <div class="cq_cd">
+                        <img src="imgs/cq_cd.png" alt="" />
+                    </div>
+                    <div class="cd_fz">
+                        <img src="imgs/cd_fz.png" alt="" />
+                    </div>
+                </div>
+                <!-- 字体显示 -->
+                <div id="city_text">
+                    <div class="beijing_text">
+                        <img src="imgs/beijing.png" alt="" />
+                    </div>
+                    <div class="shanghai_text">
+                        <img src="imgs/shanghai.png" alt="" />
+                    </div>
+                    <div class="guangzhou_text">
+                        <img src="imgs/guangzhou.png" alt="" />
+                    </div>
+                    <div class="shenzhen_text">
+                        <img src="imgs/shenzhen.png" alt="" />
+                    </div>
+                    <div class="wuhan_text">
+                        <img src="imgs/wuhan.png" alt="" />
+                    </div>
+                    <div class="xiamen_text">
+                        <img src="imgs/xiamen.png" alt="" />
+                    </div>
+                    <div class="hangzhou_text">
+                        <img src="imgs/hangzhou.png" alt="" />
+                    </div>
+                    <div class="chongqing_text">
+                        <img src="imgs/chongqing.png" alt="" />
+                    </div>
+                    <div class="chengdu_text">
+                        <img src="imgs/chengdu.png" alt="" />
+                    </div>
+                    <div class="fuzhou_text">
+                        <img src="imgs/chengdu.png" alt="" />
+                    </div>
+                </div>
+                <!-- 北京 -->
+                <div id="beijing" class="city">
+                    <img src="imgs/bj.jpg" class="city_bg" alt="" />
+                    <div class="a0 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/bj1.png" class="title left_60" alt="" />
+                        <img src="imgs/bj1_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a1 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/bj2.png" class="title right_60" alt="" />
+                        <img src="imgs/bj2_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a2 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/bj3.png" class="title right_60" alt="" />
+                        <img src="imgs/bj3_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a3 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/bj4.png" class="title right_60" alt="" />
+                        <img src="imgs/bj4_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a4 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/bj5.png" class="title right_60" alt="" />
+                        <img src="imgs/bj5_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a5 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/bj6.png" class="title right_60" alt="" />
+                        <img src="imgs/bj6_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a6 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/bj7.png" class="title left_60" alt="" />
+                        <img src="imgs/bj7_text.png" class="text left_60" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 上海 -->
+                <div id="shanghai" class="city">
+                    <img src="imgs/sh.jpg" class="city_bg" alt="" />
+                    <div class="a0 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sh1.png" class="title right_60" alt="" />
+                        <img src="imgs/sh1_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a1 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sh2.png" class="title right_60" alt="" />
+                        <img src="imgs/sh2_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a2 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sh3.png" class="title right_60" alt="" />
+                        <img src="imgs/sh3_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a3 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sh4.png" class="title left_60" alt="" />
+                        <img src="imgs/sh4_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a4 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sh5.png" class="title left_60" alt="" />
+                        <img src="imgs/sh5_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a5 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sh6.png" class="title right_60" alt="" />
+                        <img src="imgs/sh6_text.png" class="text right_60" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 广州 -->
+                <div id="guangzhou" class="city">
+                    <img src="imgs/gz.jpg" class="city_bg" alt="" />
+                    <div class="a0 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/gz1.png" class="title right_60" alt="" />
+                        <img src="imgs/gz1_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a1 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/gz2.png" class="title right_60" alt="" />
+                        <img src="imgs/gz2_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a2 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/gz3.png" class="title left_60" alt="" />
+                        <img src="imgs/gz3_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a3 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/gz4.png" class="title right_60" alt="" />
+                        <img src="imgs/gz4_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a4 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/gz5.png" class="title right_60" alt="" />
+                        <img src="imgs/gz5_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a5 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/gz6.png" class="title left_60" alt="" />
+                        <img src="imgs/gz6_text.png" class="text left_60" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 深圳 -->
+                <div id="shenzhen" class="city">
+                    <img src="imgs/sz.jpg" class="city_bg" alt="" />
+                    <div class="a0 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sz1.png" class="title left_60" alt="" />
+                        <img src="imgs/sz1_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a1 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sz2.png" class="title left_60" alt="" />
+                        <img src="imgs/sz2_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a2 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sz3.png" class="title right_60" alt="" />
+                        <img src="imgs/sz3_text.png" class="text right_60" alt="" />
+                    </div>
+                    <div class="a3 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sz4.png" class="title left_60" alt="" />
+                        <img src="imgs/sz4_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a4 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sz5.png" class="title left_60" alt="" />
+                        <img src="imgs/sz5_text.png" class="text left_60" alt="" />
+                    </div>
+                    <div class="a5 city">
+                        <img src="imgs/cli.png" class="circular" alt="" />
+                        <img src="imgs/sz6.png" class="title left_60" alt="" />
+                        <img src="imgs/sz6_text.png" class="text left_60" alt="" />
+                    </div>
+                </div>
+
+            </div>
+            <div id="bot">
+                <div class="bot1 bot_p1">
+                    <p class="title">是什么构成了城市？</p>
+                    <p class="text">What constitutes a city？</p>
+                </div>
+                <div class="bot2 bot_p2">
+                    <p class="title">是公司</p>
+                    <p class="text">The company</p>
+                </div>
+                <div class="bot2 bot_p3">
+                    <p class="title">是什么构成了公司？</p>
+                    <p class="text">What constitutes a company?</p>
+                </div>
+                <div class="bot2 bot_p4">
+                    <p class="title">是每一个“我”</p>
+                    <p class="text">very one of “me”</p>
+                </div>
+                <div class="bot2 bot_p5">
+                    <p class="title">这个城市的每一个成就</p>
+                    <p class="text">Every achievement of this city</p>
+                </div>
+                <div class="bot2 bot_p6">
+                    <p class="title">都与“我”有关</p>
+                    <p class="text">Welcome to our era</p>
+                </div>
+                <div class="bot3 bot_p7">
+                    <p class="title">欢迎来到我们的时代</p>
+                    <p class="text">Let's make the company a better place</p>
+                </div>
+                <div class="bot3 bot_p8" style="margin:0;">
+                    <p class="title">我们一起把公司变得更好</p>
+                    <p class="text">Let's make the company a better place</p>
+                </div>
+                <div class="botto">
+                    <img src="imgs/welcome_come.png" width="100%" alt="" />
+                    <a href="" class="btn"><img src="imgs/btn.png" alt="" width="90%" /></a>
+                    <img class="logo" src="imgs/logo.png"  alt="" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+
+    
+        
+            // JT.set('#container', {transformOrigin: "-200px -300px"});
+            // JT.to('#container', 1, {
+            //    scale: 22,
+            //     delay: 1,
+            //    yoyo: true,
+            //     ease: JT.Quad.Out,
+            //     onStart: function(){
+            //         JT.to('#beijing', 1, {
+            //             opacity: 1,
+            //             delay: 1,
+            //             yoyo: true,
+            //             ease: JT.Quad.Out
+            //         })
+            //     },
+            //     onEnd: function () {
+            //         console.log("1 complete");
+            //     },
+            //     onUpdate :function(){
+            //         // num++;
+            //         // if (num >=100) {
+            //         //     JT.pause()
+            //         // };
+            //     }
+            // });
+
+
+        </script>
+
+    </body>
+</html>
