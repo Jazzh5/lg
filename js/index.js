@@ -138,7 +138,7 @@ function code(){
             })
         },1000)
 
-    },8000)
+    },4000)
 
     
     //进入上海
@@ -199,7 +199,7 @@ function code(){
                             }
                         })
 
-                    },8000)
+                    },4000)
                 }
 
             })
@@ -261,7 +261,7 @@ function code(){
                         })
 
 
-                    },8000)
+                    },4000)
                 }
             })
     }
@@ -301,7 +301,7 @@ function code(){
                             MTween({
                                 el: sz_wh,
                                 target: {rotate: -97},
-                                time: 5000,
+                                time: 3000,
                                 type: "easeBothStrong",
                                 callProcess: function(){
                                     var rote = css(sz_wh,"rotate")
@@ -322,7 +322,7 @@ function code(){
                             })
                         }
                     })
-                },8000)
+                },4000)
             }
         })
     }
@@ -336,7 +336,7 @@ function code(){
             MTween({
                 el: wh_xm,
                 target: {rotate: 75},
-                time: 5000,
+                time: 3000,
                 type: "easeBothStrong",
                 callProcess: function(){
                     var rote = css(wh_xm,"rotate")
@@ -369,7 +369,7 @@ function code(){
             MTween({
                 el: xm_hz,
                 target: {rotate: -60},
-                time: 5000,
+                time: 3000,
                 type: "easeBothStrong",
                 callProcess: function(){
                     var rote = css(xm_hz,"rotate")
@@ -402,7 +402,7 @@ function code(){
             MTween({
                 el: hz_cq,
                 target: {rotate: -60},
-                time: 5000,
+                time: 2500,
                 type: "easeBothStrong",
                 callProcess: function(){
                     var rote = css(hz_cq,"rotate")
@@ -433,7 +433,7 @@ function code(){
             MTween({
                 el: cq_cd,
                 target: {rotate: -142},
-                time: 5000,
+                time: 1000,
                 type: "easeBothStrong",
                 callProcess: function(){
                     var rote = css(cq_cd,"rotate")
@@ -465,7 +465,7 @@ function code(){
             MTween({
                 el: cd_fz,
                 target: {rotate: 422},
-                time: 5000,
+                time: 3000,
                 type: "easeBothStrong",
                 callProcess: function(){
                     var rote = css(cd_fz,"rotate")
@@ -535,9 +535,9 @@ function code(){
             if (num >= len-1) {
                 clearInterval(timer)
             };
-        city.find('.a'+num).fadeIn(1000);
+        city.find('.a'+num).fadeIn(500);
 
-        },1000)
+        },500)
     }
 }
 

@@ -549,9 +549,11 @@ img{
     position:absolute;
     left: 0;
     top: 0;
-    margin-top: 63.2%;
+    margin-top: 66.5%;
     padding-top: 3%;
     overflow:hidden;
+    transform-origin: left bottom;
+    transform: rotate(-4deg);
 }
 .hz_cq img{
     width:100%;
@@ -573,6 +575,7 @@ img{
     transform-origin:12.8% 118.4%;
     width:100%;
     transform:rotate(131deg);
+    margin-left:2%;
 }
 .cd_fz{
     /*background:red;*/
@@ -582,13 +585,13 @@ img{
     top: 0;
     margin-top:48.13333%;
     overflow:hidden;
-    transform: rotate(23deg);
+    transform: rotate(15deg);
 }
 .cd_fz img{
     transform-origin:43.0666% 83.47%;
     width:100%;
     transform:rotate(159deg);
-    margin-left: 6%;
+    margin-left: 8%;
 }
 /*城市字体*/
 #city_text{
