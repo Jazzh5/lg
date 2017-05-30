@@ -153,7 +153,7 @@ img{
 .sh_gz img{
     width:100%;
     transform-origin:-32.2666% -35.9834%;
-    transform:rotate(-63deg);
+    transform:rotate(-62deg);
 }
 /*北京*/
 #beijing{
@@ -223,7 +223,7 @@ img{
     margin-top:118.1333%;
 }
 .wh_cli{
-    left: 55.6666%;
+    left: 59.6666%;
     margin-top: 73.06666%;
 }
 .cq_cli{
@@ -494,7 +494,7 @@ img{
     margin-top:84.533%;
 }
 .gz_sz{
-    width:10.666%;
+    width:9.666%;
     position:absolute;
     left: 48.5%;
     top:0;
@@ -503,14 +503,15 @@ img{
 }
 .gz_sz img{
     transform-origin: 48% -48%;
-    transform:rotate(120deg);
+    transform:rotate(114deg);
 }
 .sz_wh{
     width:100%;
     position:absolute;
     left: 0;
     top: 0;
-    margin-top: 77.2%;
+    margin-top: 78.2%;
+    margin-left: 2%;
     overflow:hidden;
 }
 .sz_wh img{
@@ -528,7 +529,7 @@ img{
 }
 .wh_xm img{
     width:100%;
-    transform-origin:48.1333% 58.27%;
+    transform-origin:41.0628% 65.5405%;
     transform:rotate(66deg);
 }
 .xm_hz{
@@ -736,7 +737,7 @@ img{
 }
 .bot1{
     width:100%;
-    margin-top:17.3333%;
+    margin-top:13.3333%;
     padding-bottom:3.0666%;
 }
 .bot1{
