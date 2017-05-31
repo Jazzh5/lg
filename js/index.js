@@ -212,7 +212,7 @@ function code(){
 
             $("#container").css('transformOrigin', '589px 491px');
 
-            $("#shanghai").fadeIn(300);
+            $("#shanghai").fadeIn(1000);
             $(".sh_cli").animate({opacity: 0},100);
             MTween({
                 el: contaier,
@@ -273,7 +273,7 @@ function code(){
     function animate3(){
         $("#container").css('transformOrigin', '336px 783px');
 
-        $("#guangzhou").fadeIn(300);
+        $("#guangzhou").fadeIn(1000);
         $(".gz_cli").animate({opacity: 0},500);
             MTween({
                 el: container,
@@ -333,7 +333,7 @@ function code(){
     function animate4(){
         $("#container").css('transformOrigin', '366px 798px');
 
-        $("#shenzhen").fadeIn(300);
+        $("#shenzhen").fadeIn(1000);
         $(".sz_cli").animate({opacity: 0},300);
         MTween({
             el: container,
@@ -554,12 +554,14 @@ function code(){
     //尾页方案2上拉动画效果
     function bot2_(){
          $("#bot").fadeIn(function(){
+            $("#cli").fadeOut(2500);
+            $("#city_text").fadeOut(2500);
             var top_ = $('body').height()/100*62;
             console.log(top_)
             var mask_box = $(".mask_box")[0];
             // $(".mask_box").animate({top: (-top_)}, 5000)
             
-            $(".mask_box").animate({top: -(top_)},15000)
+            $(".mask_box").animate({top: -(top_)},20000)
 
 
          });
