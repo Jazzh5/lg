@@ -201,11 +201,7 @@ img{
     opacity:0;
 }
 #cli div .yuanxin{
-    position:absolute;
-    left:50%;
-    top:50%;
-    -webkit-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
+    width:100%;
 }
 #cli div .guangquan{
     width:100%;
@@ -762,7 +758,7 @@ img{
 }
 .bot1{
     width:100%;
-    margin-top:13.3333%;
+    /*margin-top:13.3333%;*/
     padding-bottom:3.0666%;
 }
 .bot2{

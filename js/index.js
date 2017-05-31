@@ -48,22 +48,8 @@ $(document).ready(function(){
             img_len++;
             // console.log(img_len)
             if (img_len >= arr.length) {
-                // var audio = document.createElement("audio");
-                // audio.src = "audio/4.mp3";
-                // audio.addEventListener("canplaythrough",function(e) {
-                // 　　console.log(e)
-                    btn = true;
-                    $(".click_").text("请点击")
-                // },
-                // false);
-                // var audio = new Audio();
-                // audio.src = "audio/4.mp3";
-                // audio.addEventListener('error', function(e){
-                //     console.log(e)
-                //     btn = true;
-                //     $(".click_").text("请点击")
-                // }, false);
-                
+                btn = true;
+                $(".click_").text("请点击")
             };
         };  
     });
@@ -93,7 +79,7 @@ $(document).ready(function(){
                 target:{
                     left: 74,
                     top: 510,
-                    scale: 1,
+                    scale: 100,
                     opacity: 0
                 },
                 time: 1000,
@@ -107,30 +93,7 @@ $(document).ready(function(){
                 }
 
             })
-            // $(".load").animate({left: 74,top:510,scale:1,opacity:0}, 2000,function(){
-            //     $("#loading").fadeOut(1000);
-            //     $("#container").fadeIn(1000);
-            //     $("#beijing .a0").fadeIn(1000,function(){
-            //         $("#media")[0].play();
-            //         code();
-            //     })
-            // })
-            // MTween({
-            //     el: load,
-            //     target: {left:74,top:510,scale:100,opacity:0},
-            //     time: 2000,
-            //     type: "easeBothStrong",
-            //     callBack: function(){
-            //         $("#loading").fadeOut(1000);
-            //         $("#container").fadeIn(1000);
-            //         $("#beijing .a0").fadeIn(1000,function(){
-            //             $("#media")[0].play();
-            //             code();
-            //         })
-            //     }
-            // })
-            // $("#loading").hide();
-            // code();
+
         }
     })
     
@@ -557,19 +520,20 @@ function code(){
     //尾页方案2上拉动画效果
     function bot2_(){
          $("#bot").fadeIn(function(){
-            $("#cli").fadeOut(2500,function(){
+            $("#cli").fadeOut(1500,function(){
                 $("#cli").remove();
             });
-            $("#city_text").fadeOut(2500,function(){
+            $("#city_text").fadeOut(1500,function(){
                 $("#city_text").remove();
                 $(".mask").remove();
+                $(".mask_box").addClass('bot_ani');
+                $(".mask_box").css('transform', 'translateY(-122%)');
 
             });
             var top_ = $('body').height()/100*62;
             var mask_box_hei = $(".mask_box").height();
             console.log(top_)
-            $(".mask_box").addClass('bot_ani');
-            $(".mask_box").css('transform', 'translateY(-122%)');
+            
             // var mask_box = $(".mask_box")[0];
             // $(".mask_box").animate({top: (-top_)}, 20000)
             // css(mask_box,"translateY",0)
