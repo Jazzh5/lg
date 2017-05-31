@@ -138,6 +138,8 @@ img{
     width:100%;
     transform-origin:34.8% 95.454545%;
     transform:rotate(-75deg);
+    -webkit-transform-origin:34.8% 95.454545%;
+    -webkit-transform:rotate(-75deg);
     /*opacity:0;*/
 }
 
@@ -156,6 +158,8 @@ img{
     width:100%;
     transform-origin:-32.2666% -35.9834%;
     transform:rotate(-62deg);
+    -webkit-transform-origin:-32.2666% -35.9834%;
+    -webkit-transform:rotate(-62deg);
 }
 /*北京*/
 #beijing{
@@ -506,6 +510,8 @@ img{
 .gz_sz img{
     transform-origin: 48% -48%;
     transform:rotate(114deg);
+    -webkit-transform-origin: 48% -48%;
+    -webkit-transform:rotate(114deg);
 }
 .sz_wh{
     width:100%;
@@ -520,6 +526,8 @@ img{
     width:100%;
     transform-origin:38.4% 45.5357%;
     transform:rotate(66deg);
+    -webkit-transform-origin:38.4% 45.5357%;
+    -webkit-transform:rotate(66deg);
 }
 .wh_xm{
     width:100%;
@@ -533,6 +541,8 @@ img{
     width:100%;
     transform-origin:41.0628% 65.5405%;
     transform:rotate(66deg);
+    -webkit-transform-origin:41.0628% 65.5405%;
+    -webkit-transform:rotate(66deg);
 }
 .xm_hz{
     width:100%;
@@ -546,6 +556,8 @@ img{
     width:100%;
     transform-origin:54.6666% 25.1141%;
     transform:rotate(66deg);
+    -webkit-transform-origin:54.6666% 25.1141%;
+    -webkit-transform:rotate(66deg);
 }
 .hz_cq{
     width:100%;
@@ -557,11 +569,15 @@ img{
     overflow:hidden;
     transform-origin: left bottom;
     transform: rotate(-4deg);
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(-4deg);
 }
 .hz_cq img{
     width:100%;
     transform-origin:52.9333% 185.234%;
     transform:rotate(125deg);
+    -webkit-transform-origin:52.9333% 185.234%;
+    -webkit-transform:rotate(125deg);
 }
 .cq_cd{
     /*background:red;*/
@@ -571,13 +587,17 @@ img{
     top: 0;
     margin-top: 75.8666%;
     transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
     overflow:hidden;
     transform: rotate(9deg);
+    -webkit-transform: rotate(9deg);
 }
 .cq_cd img{
     transform-origin:12.8% 118.4%;
+    -webkit-transform-origin:12.8% 118.4%;
     width:100%;
     transform:rotate(131deg);
+    -webkit-transform:rotate(131deg);
     margin-left:2%;
 }
 .cd_fz{
@@ -589,11 +609,14 @@ img{
     margin-top:48.13333%;
     overflow:hidden;
     transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
 }
 .cd_fz img{
     transform-origin:43.0666% 83.47%;
+    -webkit-transform-origin:43.0666% 83.47%;
     width:100%;
     transform:rotate(159deg);
+    -webkit-transform:rotate(159deg);
     margin-left: 8%;
 }
 /*城市字体*/
@@ -728,14 +751,14 @@ img{
 }
 #bot .title{
     color:#00fbd9;
-    font-size: 30px;
+    font-size: 26px;
     text-align:center;
     line-height:1.5;
 }
 #bot .text{
     color:#055d55;
     text-align:center;
-    font-size: 20px;
+    font-size: 16px;
 }
 .bot1{
     width:100%;
@@ -780,4 +803,30 @@ img{
     left:0;
     top:100%;
     width:100%;
+    webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.bot_ani{
+    animation:translate 20s linear;
+    -webkit-animation:translate 20s linear;
+}
+@-webkit-keyframes translate{
+    0% {
+        -webkit-transform:translateY(0);
+    }
+    100% {
+        -webkit-transform:translateY(-122%);
+    }
+}
+@keyframes translate{
+    0% {
+        transform:translateY(0);
+    }
+    100% {
+        transform:translateY(-122%);
+    }
 }

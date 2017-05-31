@@ -151,7 +151,6 @@ $(document).ready(function(){
 function code(){
 
 
-
     show_company($("#beijing"));
 
     setTimeout(function(){
@@ -167,6 +166,7 @@ function code(){
         })
         //北京透明
         $("#beijing").fadeOut(1000,function(){
+            $("#beijing").remove();
             $(".bj_cli").animate({opacity:1}, 500);
             // animation($(".bj_cli .guangquan"))
             $(".beijing_text").fadeIn(100);
@@ -224,6 +224,7 @@ function code(){
                     setTimeout(function(){
 
                         $("#shanghai").fadeOut(2000,function(){
+                            $("#shanghai").remove();
                             $(".sh_cli").animate({opacity:1}, 500);
                             // animation($(".sh_cli  .guangquan"))
                             $(".shanghai_text").fadeIn(100);
@@ -287,6 +288,7 @@ function code(){
                     setTimeout(function(){
                         //深圳缩小
                         $("#guangzhou").fadeOut(2000,function(){
+                            $("#guangzhou").remove();
                             $(".gz_cli").animate({opacity:1}, 500);
                             // animation($(".gz_cli .guangquan"))
                             $(".guangzhou_text").fadeIn(100);
@@ -347,6 +349,7 @@ function code(){
                 setTimeout(function(){
                     //深圳缩小  
                     $("#shenzhen").fadeOut(1000,function(){
+                        $("#shenzhen").remove();
                         $(".sz_cli").animate({opacity:1}, 2000);
                         // animation($(".sz_cli .guangquan"))
                         $(".shenzhen_text").fadeIn(2000);
@@ -554,14 +557,30 @@ function code(){
     //尾页方案2上拉动画效果
     function bot2_(){
          $("#bot").fadeIn(function(){
-            $("#cli").fadeOut(2500);
-            $("#city_text").fadeOut(2500);
+            $("#cli").fadeOut(2500,function(){
+                $("#cli").remove();
+            });
+            $("#city_text").fadeOut(2500,function(){
+                $("#city_text").remove();
+                $(".mask").remove();
+
+            });
             var top_ = $('body').height()/100*62;
+            var mask_box_hei = $(".mask_box").height();
             console.log(top_)
-            var mask_box = $(".mask_box")[0];
-            // $(".mask_box").animate({top: (-top_)}, 5000)
-            
-            $(".mask_box").animate({top: -(top_)},20000)
+            $(".mask_box").addClass('bot_ani');
+            $(".mask_box").css('transform', 'translateY(-122%)');
+            // var mask_box = $(".mask_box")[0];
+            // $(".mask_box").animate({top: (-top_)}, 20000)
+            // css(mask_box,"translateY",0)
+            // MTween({
+            //     el: mask_box,
+            //     target: {translateY: -(mask_box_hei+mask_box_hei/5)},
+            //     time: 20000,
+            //     type: "linear"
+            // })
+
+            // $(".mask_box").animate({top: -(top_)},20000)
 
 
          });
