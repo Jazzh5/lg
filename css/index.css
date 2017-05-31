@@ -740,17 +740,18 @@ img{
     margin-top:13.3333%;
     padding-bottom:3.0666%;
 }
-.bot1{
+.bot2{
     width:100%;
     padding-bottom:3.0666%;
 }
 .bot3{
     margin-top:30px;
 }
+.bot_p7{
+    margin-top:30.666%;
+}
 .botto{
-    position:absolute;
-    bottom:0;
-    bottom:0;
+    margin-top:19.2%;
     text-align:center;
 }
 .btn{
@@ -766,9 +767,15 @@ img{
     margin:0 auto;
 }
 #bot p, #bot .botto{
-    display:none;
+    /*display:none;*/
 }
 .bandown{
     animation:bounceInDown 1s;
     -webkit-animation:bounceInDown 1s;
+}
+.mask_box{
+    position:absolute;
+    left:0;
+    top:100%;
+    width:100%;
 }
