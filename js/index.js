@@ -144,9 +144,9 @@ function code(){
             MTween({
                 el: bi_sh,
                 target: {
-                    rotate: 40
+                    rotate: 33
                 },
-                time: 3000,
+                time: 2500,
                 type: "easeBothStrong",
                 callProcess: function(){
                     var rote = css(bi_sh,"rotate")
@@ -160,6 +160,7 @@ function code(){
                     }
                 },
                 callBack: function(){
+                    $(".bj_sh").remove();
                     animate2();
                 }
             })
@@ -206,7 +207,7 @@ function code(){
                                 MTween({
                                     el: sh_gz,
                                     target: {rotate: 32},
-                                    time: 3000,
+                                    time: 2500,
                                     type: "easeBothStrong",
                                     callProcess: function(){
                                         var rote = css(sh_gz,"rotate")
@@ -220,6 +221,7 @@ function code(){
                                         }
                                     },
                                     callBack: function(){
+                                        $(".sh_gz").remove();
                                         animate3();
                                     }
                                 })
@@ -239,60 +241,61 @@ function code(){
 
         $("#guangzhou").fadeIn(1000);
         $(".gz_cli").animate({opacity: 0},500);
-            MTween({
-                el: container,
-                target: {
-                    scale: 5600
-                },
-                time: 2000,
-                type: "easeBothStrong",
-                callBack: function(){
-                    show_company($("#guangzhou"));
-                    setTimeout(function(){
-                        //深圳缩小
-                        $("#guangzhou").fadeOut(2000,function(){
-                            $("#guangzhou").remove();
-                            $(".gz_cli").animate({opacity:1}, 500);
-                            // animation($(".gz_cli .guangquan"))
-                            $(".guangzhou_text").fadeIn(100);
-                        });
+        MTween({
+            el: container,
+            target: {
+                scale: 5600
+            },
+            time: 2000,
+            type: "easeBothStrong",
+            callBack: function(){
+                show_company($("#guangzhou"));
+                setTimeout(function(){
+                    //深圳缩小
+                    $("#guangzhou").fadeOut(2000,function(){
+                        $("#guangzhou").remove();
+                        $(".gz_cli").animate({opacity:1}, 500);
+                        // animation($(".gz_cli .guangquan"))
+                        $(".guangzhou_text").fadeIn(100);
+                    });
 
-                        MTween({
-                            el: contaier,
-                            target: {scale:100},
-                            time: 2000,
-                            type: "easeBothStrong",
-                            callBack: function(){
-                                //广州到深圳
-                                var gz_sz = $(".gz_sz img")[0];
-                                css(gz_sz,"rotate",114)
+                    MTween({
+                        el: contaier,
+                        target: {scale:100},
+                        time: 2000,
+                        type: "easeBothStrong",
+                        callBack: function(){
+                            //广州到深圳
+                            var gz_sz = $(".gz_sz img")[0];
+                            css(gz_sz,"rotate",114)
 
-                                MTween({
-                                    el: gz_sz,
-                                    target: {rotate: -74},
-                                    time: 1500,
-                                    type: "easeBothStrong",
-                                    callProcess: function(){
-                                        var rote = css(gz_sz,"rotate")
-                                        //当旋转到一定角度，上海亮点显示，去除北京亮点
-                                        // console.log(rote)
-                                        if(rote <= 46){
-                                            if ($(".sz_cli").css('opacity') == 0) {
-                                                $(".sz_cli").animate({opacity: 1},300);
-                                            };
-                                        }
-                                    },
-                                    callBack:function(){
-                                        animate4();
+                            MTween({
+                                el: gz_sz,
+                                target: {rotate: -55},
+                                time: 1500,
+                                type: "easeBothStrong",
+                                callProcess: function(){
+                                    var rote = css(gz_sz,"rotate")
+                                    //当旋转到一定角度，上海亮点显示，去除北京亮点
+                                    // console.log(rote)
+                                    if(rote <= 46){
+                                        if ($(".sz_cli").css('opacity') == 0) {
+                                            $(".sz_cli").animate({opacity: 1},300);
+                                        };
                                     }
-                                })
-                            }
-                        })
+                                },
+                                callBack:function(){
+                                    $(".gz_sz").remove();
+                                    animate4();
+                                }
+                            })
+                        }
+                    })
 
 
-                    },4000)
-                }
-            })
+                },4000)
+            }
+        })
     }
 
     function animate4(){
@@ -322,7 +325,7 @@ function code(){
                         target: {
                             scale: 100
                         },
-                        time: 2000,
+                        time: 1500,
                         type: "easeBothStrong",
                         callBack: function(){
                             //深圳到武汉
@@ -330,7 +333,7 @@ function code(){
                             css(sz_wh,"rotate",66)
                             MTween({
                                 el: sz_wh,
-                                target: {rotate: -88},
+                                target: {rotate: -78},
                                 time: 2000,
                                 type: "easeBothStrong",
                                 callProcess: function(){
@@ -346,7 +349,7 @@ function code(){
                                     }
                                 },
                                 callBack:function(){
-
+                                    $(".sz_wh").remove();
                                     animate5();
                                 }
                             })
@@ -360,159 +363,150 @@ function code(){
     // 武汉到厦门
     function animate5(){
 
-        setTimeout(function(){
-            var wh_xm = $(".wh_xm img")[0];
-            css(wh_xm,"rotate",-67)
-            MTween({
-                el: wh_xm,
-                target: {rotate: 75},
-                time: 2000,
-                type: "easeBothStrong",
-                callProcess: function(){
-                    var rote = css(wh_xm,"rotate")
-                    //当旋转到一定角度，上海亮点显示，去除北京亮点
-                    // console.log(rote)
-                    if(rote >= 4){
-                        if ($(".xm_cli").css('opacity') == 0) {
-                            $(".xm_cli").animate({opacity: 1},300);
-                            $(".xiamen_text").fadeIn(100);
-                            // animation($(".xm_cli .guangquan"));
-                        };
-                    }
-                },
-                callBack:function(){
-
-                    animate6();
+        var wh_xm = $(".wh_xm img")[0];
+        css(wh_xm,"rotate",-62)
+        MTween({
+            el: wh_xm,
+            target: {rotate: 46},
+            time: 2000,
+            type: "easeBothStrong",
+            callProcess: function(){
+                var rote = css(wh_xm,"rotate")
+                //当旋转到一定角度，上海亮点显示，去除北京亮点
+                // console.log(rote)
+                if(rote >= 4){
+                    if ($(".xm_cli").css('opacity') == 0) {
+                        $(".xm_cli").animate({opacity: 1},300);
+                        $(".xiamen_text").fadeIn(100);
+                        // animation($(".xm_cli .guangquan"));
+                    };
                 }
-            })
-        },500)
+            },
+            callBack:function(){
+                $(".wh_xm").remove();
+                animate6();
+            }
+        })
 
     }
 
     // 厦门到杭州
     function animate6(){
 
-        setTimeout(function(){
-            var xm_hz = $(".xm_hz img")[0];
-            css(xm_hz,"rotate",70)
-            MTween({
-                el: xm_hz,
-                target: {rotate: -60},
-                time: 2000,
-                type: "easeBothStrong",
-                callProcess: function(){
-                    var rote = css(xm_hz,"rotate")
-                    //当旋转到一定角度，上海亮点显示，去除北京亮点
-                    // console.log(rote)
-                    if(rote <= 18){
-                        if ($(".hz_cli").css('opacity') == 0) {
-                            $(".hz_cli").animate({opacity: 1},300);
-                            $(".hangzhou_text").fadeIn(100);
-                            // animation($(".hz_cli .guangquan"));
-                        };
-                    }
-                },
-                callBack:function(){
-
-                    animate7();
+        var xm_hz = $(".xm_hz img")[0];
+        css(xm_hz,"rotate",61)
+        MTween({
+            el: xm_hz,
+            target: {rotate: -33},
+            time: 2000,
+            type: "easeBothStrong",
+            callProcess: function(){
+                var rote = css(xm_hz,"rotate")
+                //当旋转到一定角度，上海亮点显示，去除北京亮点
+                // console.log(rote)
+                if(rote <= 18){
+                    if ($(".hz_cli").css('opacity') == 0) {
+                        $(".hz_cli").animate({opacity: 1},300);
+                        $(".hangzhou_text").fadeIn(100);
+                        // animation($(".hz_cli .guangquan"));
+                    };
                 }
-            })
-        },500)
+            },
+            callBack:function(){
+                $(".xm_hz").remove();
+                animate7();
+            }
+        })
 
     }
 
     // 杭州到重庆
     function animate7(){
 
-        setTimeout(function(){
-            var hz_cq = $(".hz_cq img")[0];
-            css(hz_cq,"rotate",125)
-            MTween({
-                el: hz_cq,
-                target: {rotate: -60},
-                time: 2000,
-                type: "easeBothStrong",
-                callProcess: function(){
-                    var rote = css(hz_cq,"rotate")
-                    //当旋转到一定角度，上海亮点显示，去除北京亮点
-                    // console.log(rote)
-                    if(rote <= 18){
-                        if ($(".cq_cli").css('opacity') == 0) {
-                            $(".cq_cli").animate({opacity: 1},300);
-                            $(".chongqing_text").fadeIn(100);
-                            // animation($(".cq_cli .guangquan"));
-                        };
-                    }
-                },
-                callBack:function(){
-
-                    animate8();
+        var hz_cq = $(".hz_cq img")[0];
+        css(hz_cq,"rotate",125)
+        MTween({
+            el: hz_cq,
+            target: {rotate: -38},
+            time: 2000,
+            type: "easeBothStrong",
+            callProcess: function(){
+                var rote = css(hz_cq,"rotate")
+                //当旋转到一定角度，上海亮点显示，去除北京亮点
+                // console.log(rote)
+                if(rote <= 18){
+                    if ($(".cq_cli").css('opacity') == 0) {
+                        $(".cq_cli").animate({opacity: 1},300);
+                        $(".chongqing_text").fadeIn(100);
+                        // animation($(".cq_cli .guangquan"));
+                    };
                 }
-            })
-        },500)
+            },
+            callBack:function(){
+                $(".hz_cq").remove();
+                animate8();
+            }
+        })
 
     }
 
     // 重庆到成都
     function animate8(){
 
-        setTimeout(function(){
-            var cq_cd = $(".cq_cd img")[0];
-            css(cq_cd,"rotate",131)
-            MTween({
-                el: cq_cd,
-                target: {rotate: -142},
-                time: 1000,
-                type: "easeBothStrong",
-                callProcess: function(){
-                    var rote = css(cq_cd,"rotate")
-                    //当旋转到一定角度，上海亮点显示，去除北京亮点
-                    // console.log(rote)
-                    if(rote <= 43){
-                        if ($(".cd_cli").css('opacity') == 0) {
-                            $(".cd_cli").animate({opacity: 1},300);
-                            $(".chengdu_text").fadeIn(100);
-                            // animation($(".cd_cli .guangquan"));
-                        };
-                    }
-                },
-                callBack:function(){
-                    animate9();
+        var cq_cd = $(".cq_cd img")[0];
+        css(cq_cd,"rotate",120)
+        MTween({
+            el: cq_cd,
+            target: {rotate: -126},
+            time: 1000,
+            type: "easeBothStrong",
+            callProcess: function(){
+                var rote = css(cq_cd,"rotate")
+                //当旋转到一定角度，上海亮点显示，去除北京亮点
+                // console.log(rote)
+                if(rote <= 43){
+                    if ($(".cd_cli").css('opacity') == 0) {
+                        $(".cd_cli").animate({opacity: 1},300);
+                        $(".chengdu_text").fadeIn(100);
+                        // animation($(".cd_cli .guangquan"));
+                    };
                 }
-            })
-        },500)
+            },
+            callBack:function(){
+                $(".cq_cd").remove();
+                animate9();
+            }
+        })
 
     }
 
     //成都福建
     function animate9(){
 
-        setTimeout(function(){
-            var cd_fz = $(".cd_fz img")[0];
-            css(cd_fz,"rotate",159)
-            MTween({
-                el: cd_fz,
-                target: {rotate: 422},
-                time: 2000,
-                type: "easeBothStrong",
-                callProcess: function(){
-                    var rote = css(cd_fz,"rotate")
-                    //当旋转到一定角度，上海亮点显示，去除北京亮点
-                    // console.log(rote)
-                    if(rote >= 320){
-                        if ($(".fz_cli").css('opacity') == 0) {
-                            $(".fz_cli").animate({opacity: 1},300);
-                            $(".fuzhou_text").fadeIn(100);
-                            // animation($(".fz_cli .guangquan"));
-                        };
-                    }
-                },
-                callBack:function(){
-
-                    bot2_();
+        var cd_fz = $(".cd_fz img")[0];
+        css(cd_fz,"rotate",159)
+        MTween({
+            el: cd_fz,
+            target: {rotate: 416},
+            time: 2000,
+            type: "easeBothStrong",
+            callProcess: function(){
+                var rote = css(cd_fz,"rotate")
+                //当旋转到一定角度，上海亮点显示，去除北京亮点
+                // console.log(rote)
+                if(rote >= 320){
+                    if ($(".fz_cli").css('opacity') == 0) {
+                        $(".fz_cli").animate({opacity: 1},300);
+                        $(".fuzhou_text").fadeIn(100);
+                        // animation($(".fz_cli .guangquan"));
+                    };
                 }
-            })
-        },500)
+            },
+            callBack:function(){
+                $(".cd_fz").remove();
+                bot2_();
+            }
+        })
 
     }
 
@@ -549,38 +543,7 @@ function code(){
 
          });
     }
-    //尾页
-    function bot(){
-        el_ani($(".bot_p1"));
-        setTimeout(function(){
-           el_ani($(".bot_p2")); 
-           setTimeout(function(){
-            el_ani($(".bot_p3"));
-               setTimeout(function(){
-                el_ani($(".bot_p4"));
 
-                   setTimeout(function(){
-                    el_ani($(".bot_p5"));
-
-                       setTimeout(function(){
-                        el_ani($(".bot_p6"));
-
-                           setTimeout(function(){
-                            el_ani($(".bot_p7"));
-
-                               setTimeout(function(){
-                                el_ani($(".bot_p8")); 
-                                setTimeout(function(){
-                                    $(".botto").fadeIn();
-                                },600)
-                               },600) 
-                           },600) 
-                       },600) 
-                   },600)
-               },600)
-           },600)
-        },600)
-    }
     //城市里的公司一次点亮的方法
     function show_company(city){
         
@@ -593,9 +556,9 @@ function code(){
             if (num >= len-1) {
                 clearInterval(timer)
             };
-        city.find('.a'+num).fadeIn(500);
+        city.find('.a'+num).fadeIn(400);
 
-        },500)
+        },400)
     }
 }
 
@@ -637,7 +600,7 @@ function code(){
         obj.children('p').eq(0).fadeIn();
         setTimeout(function(){
             obj.children('p').eq(1).fadeIn();
-        },400)
+        },500)
     };
 
     $("#bot .text").each(function(index, el) {
