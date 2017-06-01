@@ -41,6 +41,9 @@ $(document).ready(function(){
     // }
     // autoPlayMusic();
 
+    //loading大小
+    var load_wid;
+    var contaier = $("#container")[0];
     $.each(arr, function(index, val) {
          var img = new Image();
          img.src = val;
@@ -49,24 +52,30 @@ $(document).ready(function(){
             // console.log(img_len)
             if (img_len >= arr.length) {
                 btn = true;
-                $(".click_").text("请点击")
+                $(".click_").text("点击开启探索")
+                //定义loading的位置
+                loading_wz()
             };
         };  
     });
 
-    //初始化先显示北京
-    var contaier = $("#container")[0];
-    var load = $(".load")[0];
+    function loading_wz(){
 
-    css(load,"scale",400);
-    css(load,"translateX",-25);
-    css(load,"translateY",-25);
+        load_wid = $(".load").width();
+        //初始化先显示北京
+        
+        var load = $(".load")[0];
 
+        css(load,"scale",100);
+        css(load,"translateX",-(load_wid/2));
+        css(load,"translateY",-(load_wid/2));
 
+    }
+
+    
     $("#container").css({
         transformOrigin: '422px 156.74px'
     });
-
     css(container,"scale",5600)
 
 
@@ -79,8 +88,8 @@ $(document).ready(function(){
                 target:{
                     left: 74,
                     top: 510,
-                    scale: 100,
-                    opacity: 0
+                    scale: 50,
+                    // opacity: 0
                 },
                 time: 1000,
                 type: "easeBothStrong",
@@ -146,7 +155,7 @@ function code(){
                 target: {
                     rotate: 33
                 },
-                time: 2500,
+                time: 2100,
                 type: "easeBothStrong",
                 callProcess: function(){
                     var rote = css(bi_sh,"rotate")
@@ -197,7 +206,7 @@ function code(){
                         MTween({
                             el: contaier,
                             target: {scale: 100},
-                            time:2000,
+                            time:1000,
                             type: "easeBothStrong",
                             callBack: function(){
                                 //上海到广州的跳跃
@@ -207,7 +216,7 @@ function code(){
                                 MTween({
                                     el: sh_gz,
                                     target: {rotate: 32},
-                                    time: 2500,
+                                    time: 2000,
                                     type: "easeBothStrong",
                                     callProcess: function(){
                                         var rote = css(sh_gz,"rotate")
@@ -222,7 +231,10 @@ function code(){
                                     },
                                     callBack: function(){
                                         $(".sh_gz").remove();
-                                        animate3();
+                                        //卡时间
+                                        setTimeout(function(){
+                                            animate3();
+                                        },850)
                                     }
                                 })
 
@@ -246,7 +258,7 @@ function code(){
             target: {
                 scale: 5600
             },
-            time: 2000,
+            time: 1000,
             type: "easeBothStrong",
             callBack: function(){
                 show_company($("#guangzhou"));
@@ -262,7 +274,7 @@ function code(){
                     MTween({
                         el: contaier,
                         target: {scale:100},
-                        time: 2000,
+                        time: 1500,
                         type: "easeBothStrong",
                         callBack: function(){
                             //广州到深圳
@@ -293,7 +305,7 @@ function code(){
                     })
 
 
-                },4000)
+                },3000)
             }
         })
     }
@@ -329,33 +341,36 @@ function code(){
                         type: "easeBothStrong",
                         callBack: function(){
                             //深圳到武汉
-                            var sz_wh = $(".sz_wh img")[0];
-                            css(sz_wh,"rotate",66)
-                            MTween({
-                                el: sz_wh,
-                                target: {rotate: -78},
-                                time: 2000,
-                                type: "easeBothStrong",
-                                callProcess: function(){
-                                    var rote = css(sz_wh,"rotate")
-                                    //当旋转到一定角度，上海亮点显示，去除北京亮点
-                                    // console.log(rote)
-                                    if(rote <= (-18)){
-                                        if ($(".wh_cli").css('opacity') == 0) {
-                                            $(".wh_cli").animate({opacity: 1},300);
-                                            $(".wuhan_text").fadeIn(100);
-                                            // animation($(".wh_cli .guangquan"))
-                                        };
+                            //卡时间
+                            setTimeout(function(){
+                                var sz_wh = $(".sz_wh img")[0];
+                                css(sz_wh,"rotate",66)
+                                MTween({
+                                    el: sz_wh,
+                                    target: {rotate: -78},
+                                    time: 2000,
+                                    type: "easeBothStrong",
+                                    callProcess: function(){
+                                        var rote = css(sz_wh,"rotate")
+                                        //当旋转到一定角度，上海亮点显示，去除北京亮点
+                                        // console.log(rote)
+                                        if(rote <= (-18)){
+                                            if ($(".wh_cli").css('opacity') == 0) {
+                                                $(".wh_cli").animate({opacity: 1},300);
+                                                $(".wuhan_text").fadeIn(100);
+                                                // animation($(".wh_cli .guangquan"))
+                                            };
+                                        }
+                                    },
+                                    callBack:function(){
+                                        $(".sz_wh").remove();
+                                        animate5();
                                     }
-                                },
-                                callBack:function(){
-                                    $(".sz_wh").remove();
-                                    animate5();
-                                }
-                            })
+                                })
+                            },4000)
                         }
                     })
-                },4000)
+                },3500)
             }
         })
     }
@@ -458,7 +473,7 @@ function code(){
         MTween({
             el: cq_cd,
             target: {rotate: -126},
-            time: 1000,
+            time: 1500,
             type: "easeBothStrong",
             callProcess: function(){
                 var rote = css(cq_cd,"rotate")

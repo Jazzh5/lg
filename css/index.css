@@ -63,16 +63,26 @@ img{
     z-index:10;
 }
 .load{
-    width:50px;
+    width:20%;
     position:absolute;
     left:50%;
-    top:48%;
+    top:57%;
+    z-index: 1;
     transform-origin:0 0;
     -webkit-transform-origin:0 0;
-    z-index: 1;
+    /*-webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);*/
 }
 .load img{
     width:100%;
+}
+.load .loading_guangquan{
+    width:28%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
 }
 .loading_bac{
     position:absolute;
@@ -81,12 +91,12 @@ img{
 }
 .click_{
     text-align:center;
-    color:#fff;
-    font-size:18px;
+    color:#087f72;
+    font-size:30px;
     position:absolute;
     width:100%;
     top:50%;
-    margin-top:17%;
+    margin-top:28%;
 }
 #shanghai, #guangzhou, #shenzhen{
     display:none;
