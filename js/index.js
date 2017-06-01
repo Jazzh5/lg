@@ -54,23 +54,19 @@ $(document).ready(function(){
                 btn = true;
                 $(".click_").text("点击开启探索")
                 //定义loading的位置
-                loading_wz()
             };
         };  
     });
 
-    function loading_wz(){
 
-        load_wid = $(".load").width();
-        //初始化先显示北京
-        
-        var load = $(".load")[0];
+    load_wid = $(".load").width();
+    //初始化先显示北京
+    
+    var load = $(".load")[0];
 
-        css(load,"scale",100);
-        css(load,"translateX",-(load_wid/2));
-        css(load,"translateY",-(load_wid/2));
-
-    }
+    css(load,"scale",100);
+    // css(load,"translateX",-(load_wid/2));
+    // css(load,"translateY",-(load_wid/2));
 
     
     $("#container").css({
@@ -82,12 +78,13 @@ $(document).ready(function(){
     $(".load").on("click",function(){
         if(btn){
             $("#media")[0].play();
+            $(".click_1,.click_2,.click_3").fadeOut(1000);
             $(".click_").fadeOut(500);
             MTween({
                 el: $(".load")[0],
                 target:{
-                    left: 74,
-                    top: 510,
+                    left: 99,
+                    top: 485,
                     scale: 50,
                     // opacity: 0
                 },

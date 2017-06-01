@@ -63,10 +63,11 @@ img{
     z-index:10;
 }
 .load{
-    width:20%;
+    width:100px;
     position:absolute;
     left:50%;
-    top:57%;
+    top:54%;
+    margin-left:-50px;
     z-index: 1;
     transform-origin:0 0;
     -webkit-transform-origin:0 0;
@@ -98,6 +99,15 @@ img{
     top:50%;
     margin-top:28%;
 }
+.click_1,.click_2,.click_3{
+    text-align:center;
+    color:#087f72;
+    font-size:30px;
+    line-height:1.5;
+}
+.click_1{
+    margin-top:50%;
+}   
 #shanghai, #guangzhou, #shenzhen{
     display:none;
 }
