@@ -143,6 +143,7 @@ function code(){
                     if(rote >= (-25)){
                         if ($(".sh_cli").css('opacity') == 0) {
                             // console.log($(".sz_cli").css('opacity'))
+                            $(".shanghai_text").fadeIn(300);
                             $(".sh_cli").animate({opacity: 1},300);
                         };
                     }
@@ -204,6 +205,7 @@ function code(){
                                         if(rote >= (-10)){
                                             if ($(".gz_cli").css('opacity') == 0) {
                                                 // console.log($(".sh_cli").css('opacity'))
+                                                $(".guangzhou_text").fadeIn(300);
                                                 $(".gz_cli").animate({opacity: 1},300);
                                             };
                                         }
@@ -220,7 +222,7 @@ function code(){
                             }
                         })
 
-                    },4000)
+                    },3000)
                 }
 
             })
@@ -271,6 +273,7 @@ function code(){
                                     // console.log(rote)
                                     if(rote <= 46){
                                         if ($(".sz_cli").css('opacity') == 0) {
+                                            $(".shenzhen_text").fadeIn(300);
                                             $(".sz_cli").animate({opacity: 1},300);
                                         };
                                     }
@@ -327,7 +330,7 @@ function code(){
                                 MTween({
                                     el: sz_wh,
                                     target: {rotate: -78},
-                                    time: 2000,
+                                    time: 2500,
                                     type: "easeBothStrong",
                                     callProcess: function(){
                                         var rote = css(sz_wh,"rotate")
@@ -336,6 +339,7 @@ function code(){
                                         if(rote <= (-18)){
                                             if ($(".wh_cli").css('opacity') == 0) {
                                                 $(".wh_cli").animate({opacity: 1},300);
+                                                $(".wuhan_text").fadeIn(300);
                                                 $(".wuhan_text").fadeIn(100);
                                                 // animation($(".wh_cli .guangquan"))
                                             };
@@ -346,7 +350,7 @@ function code(){
                                         animate5();
                                     }
                                 })
-                            },4000)
+                            },3500)
                         }
                     })
                 },3500)
@@ -370,6 +374,7 @@ function code(){
                 // console.log(rote)
                 if(rote >= 4){
                     if ($(".xm_cli").css('opacity') == 0) {
+                        $(".xiamen_text").fadeIn(300);
                         $(".xm_cli").animate({opacity: 1},300);
                         $(".xiamen_text").fadeIn(100);
                         // animation($(".xm_cli .guangquan"));
@@ -400,6 +405,7 @@ function code(){
                 // console.log(rote)
                 if(rote <= 18){
                     if ($(".hz_cli").css('opacity') == 0) {
+                        $(".hangzhou_text").fadeIn(300);
                         $(".hz_cli").animate({opacity: 1},300);
                         $(".hangzhou_text").fadeIn(100);
                         // animation($(".hz_cli .guangquan"));
@@ -430,6 +436,7 @@ function code(){
                 // console.log(rote)
                 if(rote <= 18){
                     if ($(".cq_cli").css('opacity') == 0) {
+                        $(".chongqing_text").fadeIn(300);
                         $(".cq_cli").animate({opacity: 1},300);
                         $(".chongqing_text").fadeIn(100);
                         // animation($(".cq_cli .guangquan"));
@@ -460,6 +467,7 @@ function code(){
                 // console.log(rote)
                 if(rote <= 43){
                     if ($(".cd_cli").css('opacity') == 0) {
+                        $(".chengdu_text").fadeIn(300);
                         $(".cd_cli").animate({opacity: 1},300);
                         $(".chengdu_text").fadeIn(100);
                         // animation($(".cd_cli .guangquan"));
@@ -490,6 +498,7 @@ function code(){
                 // console.log(rote)
                 if(rote >= 320){
                     if ($(".fz_cli").css('opacity') == 0) {
+                        $(".fuzhou_text").fadeIn(300);
                         $(".fz_cli").animate({opacity: 1},300);
                         $(".fuzhou_text").fadeIn(100);
                         // animation($(".fz_cli .guangquan"));
