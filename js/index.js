@@ -39,6 +39,17 @@ $(document).ready(function(){
     // css(load,"translateX",-(load_wid/2));
     // css(load,"translateY",-(load_wid/2));
 
+//首页字幕依次出现
+
+    $('.click_1').fadeIn(1000,function(){
+        $('.click_2').fadeIn(1000,function(){
+            $('.click_3').fadeIn(1000,function(){
+                $('.click_').fadeIn();
+                $('.load').fadeIn();
+            })
+        })
+    })
+
     
     $("#container").css({
         transformOrigin: '422px 156.74px'

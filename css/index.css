@@ -105,6 +105,9 @@ img{
     font-size:30px;
     line-height:1.5;
 }
+.load,.click_,.click_1,.click_2,.click_3{
+    display:none;
+}
 .click_1{
     margin-top:50%;
 }   
