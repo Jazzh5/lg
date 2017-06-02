@@ -11,35 +11,6 @@ $(document).ready(function(){
     var btn = false;
 
 
-    //音乐自动播放
-    // function autoPlayMusic() {
-    //     // 自动播放音乐效果，解决浏览器或者APP自动播放问题
-    //     function musicInBrowserHandler() {
-    //         // musicPlay(true);
-    //         document.body.removeEventListener('touchstart', musicInBrowserHandler);
-    //     }
-    //     document.body.addEventListener('touchstart', musicInBrowserHandler);
-
-    //     // 自动播放音乐效果，解决微信自动播放问题
-    //     function musicInWeixinHandler() {
-    //         // musicPlay(true);
-    //         document.addEventListener("WeixinJSBridgeReady", function () {
-    //             // musicPlay(true);
-    //         }, false);
-    //         document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
-    //     }
-    //     document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
-    // }
-    // function musicPlay(isPlay) {
-    //     var audio = document.getElementById('musicid');
-    //     if (isPlay && audio.paused) {
-    //         audio.play();
-    //     }
-    //     if (!isPlay && !audio.paused) {
-    //         audio.pause();
-    //     }
-    // }
-    // autoPlayMusic();
 
     //loading大小
     var load_wid;
@@ -160,7 +131,7 @@ function code(){
                     // console.log(rote)
                     if(rote >= (-25)){
                         if ($(".sh_cli").css('opacity') == 0) {
-                            console.log($(".sz_cli").css('opacity'))
+                            // console.log($(".sz_cli").css('opacity'))
                             $(".sh_cli").animate({opacity: 1},300);
                         };
                     }
@@ -221,7 +192,7 @@ function code(){
                                         // console.log(rote)
                                         if(rote >= (-10)){
                                             if ($(".gz_cli").css('opacity') == 0) {
-                                                console.log($(".sh_cli").css('opacity'))
+                                                // console.log($(".sh_cli").css('opacity'))
                                                 $(".gz_cli").animate({opacity: 1},300);
                                             };
                                         }
@@ -538,7 +509,7 @@ function code(){
             });
             var top_ = $('body').height()/100*62;
             var mask_box_hei = $(".mask_box").height();
-            console.log(top_)
+            // console.log(top_)
             
             // var mask_box = $(".mask_box")[0];
             // $(".mask_box").animate({top: (-top_)}, 20000)
@@ -562,7 +533,7 @@ function code(){
         var num = 0;
 
         var len = city.find('.city').length;
-        console.log(len)
+        // console.log(len)
         var timer = setInterval(function(){
             num++;
             if (num >= len-1) {

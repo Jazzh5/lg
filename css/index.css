@@ -827,8 +827,8 @@ img{
 }
 
 .bot_ani{
-    animation:translate 21s linear;
-    -webkit-animation:translate 21s linear;
+    animation:translate 20.5s linear;
+    -webkit-animation:translate 20.5s linear;
 }
 @-webkit-keyframes translate{
     0% {
