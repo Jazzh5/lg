@@ -765,8 +765,9 @@ img{
     background:rgba(0, 0, 0, 0.3);
     left:0;
     top:0;
-    z-index:20;
+    z-index:9;
     display:none;
+    /*opacity:0;*/
 }
 #bot .title{
     color:#00fbd9;
@@ -822,23 +823,25 @@ img{
     left:0;
     top:100%;
     width:100%;
-    webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
+    webkit-transform:translateY(0) translateZ(0);
+    -moz-transform:translateY(0) translateZ(0);
+    -ms-transform:translateY(0) translateZ(0);
+    -o-transform:translateY(0) translateZ(0);
+    transform:translateY(0) translateZ(0);
+    /*transition: top 20s linear;
+    -webkit-transition: top 20s linear;*/
 }
 
 .bot_ani{
-    animation:translate 20.5s linear;
-    -webkit-animation:translate 20.5s linear;
+    animation:translate 21s linear;
+    -webkit-animation:translate 21s linear;
 }
 @-webkit-keyframes translate{
     0% {
-        -webkit-transform:translateY(0);
+        -webkit-transform:translateY(0) translateZ(0);
     }
     100% {
-        -webkit-transform:translateY(-122%);
+        -webkit-transform:translateY(-122%) translateZ(0);
     }
 }
 @keyframes translate{

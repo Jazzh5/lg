@@ -56,6 +56,11 @@ $(document).ready(function(){
     });
     css(container,"scale",5600)
 
+    $('.load').css({
+        left: ($("body").width())*0.5,
+        top: ($("body").height())*0.54
+    });
+
 
     $(".load").on("click",function(){
         if(btn){
@@ -523,12 +528,13 @@ function code(){
             $("#city_text").fadeOut(1500,function(){
                 $("#city_text").remove();
                 $(".mask").remove();
-                $(".mask_box").addClass('bot_ani');
-                $(".mask_box").css('transform', 'translateY(-122%)');
 
             });
-            var top_ = $('body').height()/100*62;
-            var mask_box_hei = $(".mask_box").height();
+
+                $(".mask_box").addClass('bot_ani');
+                $(".mask_box").css('transform', 'translateY(-122%)');
+            // var top_ = $('body').height()/100*62;
+            // var mask_box_hei = $(".mask_box").height();
             // console.log(top_)
             
             // var mask_box = $(".mask_box")[0];
